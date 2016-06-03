@@ -94,7 +94,9 @@
 	\gdef\@labelTypeStudy{Studienarbeit}%
 	\gdef\@labelTypeDiplom{Diplomarbeit}%
 	\gdef\@labelTypeBachelor{Bachelorarbeit}%
+	\gdef\@labelTypeBachelorProposal{Bachelor's Thesis Proposal}%
 	\gdef\@labelTypeMaster{Masterarbeit}%
+	\gdef\@labelTypeMasterProposal{Master's Thesis Proposal}%
 	\gdef\@labelTypeProjectINF{Projekt-INF}%
 	\gdef\@labelTypeFachstudie{Fachstudie}%
 	\gdef\@labelTypeProzessanalyse{Prozessanalyse}%
@@ -191,7 +193,9 @@
 	\def\0{diplom}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeDiplom}}{}
 	\def\0{study}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeStudy}}{}
 	\def\0{bachelor}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeBachelor}}{}
+	\def\0{bachelorproposal}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeBachelorProposal}}{}
 	\def\0{master}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeMaster}}{}
+	\def\0{masterproposal}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeMasterProposal}}{}
 	\def\0{projectinf}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeProjectINF}}{}
 }
 
@@ -322,7 +326,7 @@
     \vbox to 60mm{\hsize=95mm\parindent=0pt
       \vskip 10mm plus 30mm minus 7.5mm
       \begin{center}\@setsize\large{14pt}\xiipt\@xiipt %%\large
-        \@labelType\ Nr.\,\MCS@number
+        \@labelType
       \end{center}%
       \vskip 12.5mm plus 12.5mm minus 10mm
       \begin{center}\@setsize\LARGE{22pt}\xviipt\@xviipt %%\LARGE
@@ -347,14 +351,14 @@
     \end{USCCover@TBlist}%
     \vfill}%
   \vbox to 70mm{%%%%% ==> 85 mm von oben
-    \begin{USCCover@TBlist}%
-      \item[\@labelStartdate:]\MCS@startdate
-      \item[\@labelEnddate:]\MCS@enddate
-      \ifx\@crk\relax \else
-          \vskip 1.5\baselineskip
-          \item[\@labelcrk:]\MCS@crk
-      \fi
-    \end{USCCover@TBlist}%
+%    \begin{USCCover@TBlist}%
+%      \item[\@labelStartdate:]\MCS@startdate
+%      \item[\@labelEnddate:]\MCS@enddate
+%      \ifx\@crk\relax \else
+%          \vskip 1.5\baselineskip
+%          \item[\@labelcrk:]\MCS@crk
+%      \fi
+%    \end{USCCover@TBlist}%
     \vfill}%
 
  \vss}\hss}%
