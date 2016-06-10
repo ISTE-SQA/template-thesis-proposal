@@ -773,3 +773,16 @@ inkscape -z -D --file=\getgraphicspath#1.svg %
 
 \usepackage{boxedminipage}
 \usepackage{pgfgantt}
+
+\newcounter{wp}
+\let\oldthesubsection=\thesubsection
+\def\thesubsection{WP\arabic{wp}}
+% \def\package#1{\subsection[\protect\thesubsection{} {#1}]{#1}}
+\def\package#1{\addtocounter{wp}{1}\subsection{#1}}
+
+% Use \task to introduce tasks
+\let\oldthesubsubsection=\thesubsubsection
+\def\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+% \def\task#1{\subsubsection[\thesubsubsection{} {#1}]{#1}}
+\let\task=\subsubsection
+
