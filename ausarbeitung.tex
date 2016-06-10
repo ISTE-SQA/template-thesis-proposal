@@ -95,6 +95,23 @@
 
 %%%
 
+\newenvironment{compact_itemize}{
+
+ \begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{
+  \end{itemize}
+ }
+
+\newenvironment{keypoints}{%
+\medskip\noindent
+\begin{boxedminipage}{\linewidth}\vspace{6pt}
+\begin{compact_itemize}}{%
+\end{compact_itemize}\vspace{-6pt}
+\end{boxedminipage}}
+
 
 \begin{document}
 
@@ -143,8 +160,8 @@
 \else
 \section*{Abstract}
 \fi
-\ldots ... Short summary of the thesis ...
-\cleardoublepage
+\ldots ... Short summary of the thesis (Swalesian introduction) ...
+%\cleardoublepage
 
 
 % BEGIN: Verzeichnisse
@@ -172,37 +189,37 @@
 %\renewcommand{\@pnumwidth}{2em}
 %\makeatother
 %
-\tableofcontents
+%\tableofcontents
 
 % Bei einem ungünstigen Seitenumbruch im Inhaltsverzeichnis, kann dieser mit
 % \addtocontents{toc}{\protect\newpage}
 % an der passenden Stelle im Fließtext erzwungen werden.
 
-\listoffigures
-\listoftables
+%\listoffigures
+%\listoftables
 
-\ifdeutsch
-\printacronyms[name=Abkürzungsverzeichnis, heading=chapter*]
-\else
-\printacronyms[name=List of Acronyms, heading=chapter*]
-\fi
+%\ifdeutsch
+%\printacronyms[name=Abkürzungsverzeichnis, heading=chapter*]
+%\else
+%\printacronyms[name=List of Acronyms, heading=chapter*]
+%\fi
 
 %Wird nur bei Verwendung von der lstlisting-Umgebung mit dem "caption"-Parameter benoetigt
 %\lstlistoflistings 
 %ansonsten:
-\ifdeutsch
-\listof{Listing}{Verzeichnis der Listings}
-\else
-\listof{Listing}{List of Listings}
-\fi
+%\ifdeutsch
+%\listof{Listing}{Verzeichnis der Listings}
+%\else
+%\listof{Listing}{List of Listings}
+%\fi
 
 %mittels \newfloat wurde die Algorithmus-Gleitumgebung definiert.
 %Mit folgendem Befehl werden alle floats dieses Typs ausgegeben
-\ifdeutsch
-\listof{Algorithmus}{Verzeichnis der Algorithmen}
-\else
-\listof{Algorithmus}{List of Algorithms}
-\fi
+%\ifdeutsch
+%\listof{Algorithmus}{Verzeichnis der Algorithmen}
+%\else
+%\listof{Algorithmus}{List of Algorithms}
+%\fi
 %\listofalgorithms %Ist nur für Algorithmen, die mittels \begin{algorithm} umschlossen werden, nötig
 
 \iftex4ht
@@ -221,17 +238,16 @@
 %
 % ** Hier wird der Text eingebunden **
 %
-\input{content/einleitung}
-%\input{...weitere Kapitel...}
-\input{content/kapitel2}
-\input{content/zusammenfassung_und_ausblick}
+\input{content/chapter1}
+\input{content/chapter2}
+\input{content/chapter3}
 %
 %
 %\renewcommand{\appendixtocname}{Anhang}
 %\renewcommand{\appendixname}{Anhang}
 %\renewcommand{\appendixpagename}{Anhang}
-\appendix
-\input{content/latex-tipps}
+%\appendix
+%\input{content/latex-tipps}
 
 %\printindex
 
@@ -240,10 +256,10 @@
 \ifdeutsch
 Alle URLs wurden zuletzt am 17.\,03.\,2008 geprüft.
 \else
-All links were last followed on March 17, 2008.
+All links were last checked on March 17, 2008.
 \fi
 
-\pagestyle{empty}
-\renewcommand*{\chapterpagestyle}{empty}
-\Versicherung
+%\pagestyle{empty}
+%\renewcommand*{\chapterpagestyle}{empty}
+%\Versicherung
 \end{document}
