@@ -5,13 +5,13 @@ About
 
 Unoffical LaTeX template for Master, Bachelor, Diploma, and Student Theses at the University of Stuttgart, Computer Science.
 
-More information at https://github.com/latextemplates/uni-stuttgart-computer-science-template.
+More information at https://github.com/ISTE-RSS/template-thesis-proposal.
 
 It originates from the studiforge server at https://vorlagen.studiforge.informatik.uni-stuttgart.de/trac/
 
 Quick start
 -----------
-If you don't want to use git, just download https://github.com/latextemplates/uni-stuttgart-computer-science-template/archive/template.zip
+If you don't want to use git, just download https://github.com/ISTE-RSS/template-thesis-proposal/archive/template-rss.zip
 
 Recommended LaTeX environments
 ------------------------------
@@ -46,13 +46,13 @@ Using with your own git repository
 Initialization
 --------------
 This howto assumes that you have not a git repository for your thesis.
-If you have, just add https://github.com/latextemplates/uni-stuttgart-computer-science-template.git as upstream and merge the branch "template" into your "master" branch.
+If you have, just add https://github.com/ISTE-RSS/template-thesis-proposal.git as upstream and merge the branch "template-rss" into your "master" branch.
 
 1. Open command line
 1. Change to the directory where you want to have your main tex file.
-1. Fetch the template from github: `git clone https://github.com/latextemplates/uni-stuttgart-computer-science-template.git .`
+1. Fetch the template from github: `git clone https://github.com/ISTE-RSS/template-thesis-proposal.git`.
 1. Rename `origin` to `github` to enable adding your own `origin` repository: `git remote rename origin github`
-1. Create a new branch master starting from the latest commit in the `template` branch: `git checkout -b master`
+1. Create a new branch master starting from the latest commit in the `template-rss` branch: `git checkout -b master`
 
 Now, you are on the `master` branch, where you can write your thesis and push it to your (remote) `origin` repository, in case you have one.
 
@@ -61,7 +61,7 @@ Merging updates from the template
 If you want to merge updates from github, do the following:
 
 1. git fetch github
-1. git merge github/template
+1. git merge github/template-rss
 
 
 LaTeX compilation
