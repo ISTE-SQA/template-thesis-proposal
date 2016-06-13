@@ -120,15 +120,10 @@ Alternatives:
 Tweaks
 ======
 
-Switching to English
+Changing title, author, etc.
 --------------------
 
-The template has been built primarily for German documents. English documents, however, are also very welcome.
-
-Five steps to switch to English typesetting:
-
-1. `ausarbeitung.tex`: Exchange commands `\ifdeutsch` and `\ifenglisch`. (Lines 11,12 <-> 15,16).
-1. Cleanup everything (e.g., `latexmk -c ausarbeitung`). Otherwise pdflatex will complain because of `ngerman`.
+Change the content of `packages_and_options.tex` line 592--602.
 
 Change Appearance of Chapter Headings
 -------------------------------------
