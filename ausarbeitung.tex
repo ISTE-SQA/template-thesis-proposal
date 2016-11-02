@@ -114,7 +114,7 @@
 
 
 \begin{document}
-
+	
 %tex4ht-Konvertierung verschönern
 \iftex4ht
 % tell tex4ht to create picures also for formulas starting with '$'
@@ -144,7 +144,7 @@
 \VerbatimFootnotes %verbatim text in Fußnoten erlauben. Geht normalerweise nicht.
 
 \input{macros/commands}
-\pagenumbering{arabic}
+\pagenumbering{roman}
 \Titelblatt
 
 %Eigener Seitenstil fuer die Kurzfassung und das Inhaltsverzeichnis
@@ -230,6 +230,8 @@
 
 % END: Verzeichnisse
 
+\mainmatter
+\pagenumbering{arabic}
 
 \renewcommand*{\chapterpagestyle}{scrplain}
 \pagestyle{scrheadings}
