@@ -97,6 +97,7 @@
 	\gdef\@labelTypeBachelorProposal{Bachelor's Thesis Proposal}%
 	\gdef\@labelTypeMaster{Masterarbeit}%
 	\gdef\@labelTypeMasterProposal{Master's Thesis Proposal}%
+	\gdef\@labelTypePhDProposal{PhD Thesis Proposal}%
 	\gdef\@labelTypeProjectINF{Projekt-INF}%
 	\gdef\@labelTypeFachstudie{Fachstudie}%
 	\gdef\@labelTypeProzessanalyse{Prozessanalyse}%
@@ -144,6 +145,7 @@
 	\gdef\@labelTypeDiplom{Diplomarbeit}%
 	\gdef\@labelTypeBachelor{Bachelorarbeit}%
 	\gdef\@labelTypeMaster{Masterarbeit}%
+	\gdef\@labelTypePhDProposal{Doktorarbeit}
 	\gdef\@labelTypeProjectINF{Projekt-INF}%
 	\gdef\@labelTypeFachstudie{Fachstudie}%
 	\gdef\@labelTypeProzessanalyse{Prozessanalyse}%
@@ -197,6 +199,7 @@
 	\def\0{master}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeMaster}}{}
 	\def\0{masterproposal}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeMasterProposal}}{}
 	\def\0{projectinf}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypeProjectINF}}{}
+	\def\0{phdproposal}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelType{\@labelTypePhDProposal}}{}
 }
 
 % ------------------------------		
