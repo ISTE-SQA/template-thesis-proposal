@@ -103,7 +103,8 @@
 	\gdef\@labelTypeProzessanalyse{Prozessanalyse}%
 	
 	\gdef\@labelCourseCS{Informatik}%
-	\gdef\@labelCourseSE{Softwaretechnik}%
+	\gdef\@labelCourseSEold{Softwaretechnik}%
+	\gdef\@labelCourseSE{Software Engineering}%
 	\gdef\@labelCourseMCL{Computerlinguistik}%
 	\gdef\@labelCourseTK{Technische Kybernetik}%
 	\gdef\@labelCourseMSV{Maschinelle Sprachverarbeitung}%
@@ -152,7 +153,8 @@
 	\gdef\@labelTypeProzessanalyse{Prozessanalyse}%
 	
 	\gdef\@labelCourseCS{Informatik}%
-	\gdef\@labelCourseSE{Softwaretechnik}%
+	\gdef\@labelCourseSEold{Softwaretechnik}%
+	\gdef\@labelCourseSE{Software Engineering}%
 	\gdef\@labelCourseMCL{Computerlinguistik}%
 	\gdef\@labelCourseTK{Technische Kybernetik}%
 	\gdef\@labelCourseMSV{Maschinelle Sprachverarbeitung}%
@@ -238,6 +240,7 @@
 	\def\1{\MCS@course}
 	% dont remove last two braces / empty else clause
 	\def\0{cs}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseCS}}{}
+	\def\0{seOld}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseSEold}}{}
 	\def\0{se}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseSE}}{}
 	\def\0{mcl}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseMCL}}{}
 	\def\0{msv}\ifthenelse{\equal{\0}{\1}}{\gdef\@labelCourseValue{\@labelCourseMSV}}{}
